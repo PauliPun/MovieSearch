@@ -1,0 +1,20 @@
+{
+  "name": "apiexercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "author": "Pauliina Punnonen",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "require": "^0.4.4"
+  }
+}

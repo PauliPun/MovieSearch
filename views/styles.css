@@ -1,0 +1,122 @@
+.bodywidth {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  background-color: #1f2833;
+  font-family: "trebuchet ms", "lucida sans", "lucida grande", "sans-serif";
+  text-align: justify;
+  text-justify: auto;
+}
+
+.background {
+  background-color: #1f2833;
+  padding-top: 60px;
+  padding-bottom: 5%;
+  color: #ffffff;
+}
+
+.bgnav {
+  background-color: #45a29e;
+  font-size: 15px;
+}
+
+/* SEARCH */
+
+.searchButton {
+  background-color: #73e2db;
+  border: 0px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #242424;
+  font-size: 14px;
+}
+/* header texts */
+
+h3 {
+  font-family: "Courier Bold", "Courier,Georgia", "Times", "Times New Roman",
+    "serif";
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+  color: #fcf8ff;
+}
+
+.title {
+  font-family: "Times New Roman", "serif";
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* My styles */
+
+.logotext {
+  font-family: "Courier Bold", "Courier", "Georgia", "Times", "Times New Roman",
+    "serif";
+  font-size: 25px;
+  margin: 5px;
+}
+
+.reponsiveimg {
+  width: 100%;
+  height: auto;
+}
+
+.bgfooter {
+  background-color: #45a29e;
+  color: #f3f3f3;
+}
+
+.pbg {
+  background-color: #fae3f8;
+  color: #000000;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.linklist {
+  list-style-type: none;
+}
+
+.tableColors {
+  color: #000000;
+  background-color: #73e2db;
+}
+
+.tablerow {
+  background-color: #b1ced3;
+}
+
+/* Links */
+
+p a,
+.alist {
+  text-decoration: none;
+  color: #7734c4;
+}
+
+p a:hover,
+.alist:hover {
+  text-decoration: none;
+  color: #ec2ffd;
+}
+
+nav a,
+.logolink {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav a:hover,
+.logolink:hover {
+  text-decoration: none;
+  color: #000000;
+}

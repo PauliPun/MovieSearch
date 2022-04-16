@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+
+  <body class="bodywidth">
+    <!-- Search box -->
+
+    <div class="container">
+      <div class="row justify-content-md-center fixed-top bgnav">
+        <div class="col col-sm-auto p-4"><h3>MovieSearch</h3></div>
+        <div class="col col-md-6 text-center p-3">
+          <form id="searchForm" name="searchForm" method="GET" action="/">
+            <div class="row">
+              <div class="col col-md text-center p-3">
+                <input
+                  name="search"
+                  type="text"
+                  class="form-control inputBox"
+                  placeholder="Search for titles..."
+                  required
+                />
+              </div>
+              <div class="col col-sm-auto text-center p-3">
+                <button type="submit" id="btnSubmit" class="btn searchButton">
+                  SEARCH
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container background maxwidth">
+      <div class="row justify-content-center">
+        <div id="searchResults" class="col col-lg-9 p-2 mt-5 text-center">
+          <table class="table table-bordered mt-5">
+            <thead class="thead-light">
+              <tr class="tableColors">
+                <th scope="col">Poster</th>
+                <th scope="col ">Title</th>
+                <th scope="col ">Year</th>
+              </tr>
+            </thead>
+
+            <% data.forEach(function(result){ %>
+            <tr class="tablerow align-middle">
+              <td><img src="<%- result.Poster; %>" /></td>
+              <td><p class="title"><%= result.Title %></p></td>
+              <td class="p-4"><%= result.Year %></td>
+            </tr>
+            <% })%>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="container-fluid">
+      <%- include('../partials/footer') %>
+    </footer>
+
+    <!-- JavaScript code -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
