@@ -1,8 +1,5 @@
-var http = require("http");
-
 const express = require("express");
 const bodyParser = require("body-parser");
-var fs = require("fs");
 const app = express();
 
 // AXIOS
@@ -27,23 +24,33 @@ app.use(bodyParser.json());
 
 // Frontpage
 app.get("/", function (req, res) {
-  var search = req.query.search;
+  const search = req.query.search;
   console.log(search);
 
-  axios
-    .get("https://www.omdbapi.com/?s=" + search + "&apikey=a13895a5")
+  if (search) {
+    axios
+      .get("https://www.omdbapi.com/?s=" + search + "&apikey=a13895a5")
 
-    .then((response) => {
-      const movies = response.data;
-      res.render("index", { data: movies.Search });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+      .then((response) => {
+        const movies = response.data;
+
+        if (movies.Search) {
+          res.render("index", { data: movies.Search });
+        } else {
+          res.render("index", { data: [] });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  } else {
+    res.render("index", { data: [] });
+  }
 });
+
 // Error
 app.get("*", function (req, res) {
-  res.status(404).send("Cant find the page!");
+  res.status(404).send("Can't find the page!");
 });
 
 // Webserver
