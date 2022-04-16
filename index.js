@@ -1,12 +1,11 @@
 var http = require("http");
-const request = require("request");
 
 const express = require("express");
 const bodyParser = require("body-parser");
 var fs = require("fs");
 const app = express();
 
-//AXIOS
+// AXIOS
 var axios = require("axios");
 
 // EJS
@@ -26,7 +25,7 @@ app.use(bodyParser.json());
 
 // EJS file routes
 
-//Frontpage
+// Frontpage
 app.get("/", function (req, res) {
   var search = req.query.search;
   console.log(search);
@@ -42,14 +41,12 @@ app.get("/", function (req, res) {
       console.log(error);
     });
 });
-//Error
+// Error
 app.get("*", function (req, res) {
   res.status(404).send("Cant find the page!");
 });
 
-//AXIOS search
-
-//Webserver
+// Webserver
 app.listen(3000, function () {
   console.log("Listening port 3000");
 });
