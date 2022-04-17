@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // AXIOS
 var axios = require("axios");
@@ -53,7 +54,7 @@ app.get("*", function (req, res) {
   res.status(404).send("Can't find the page!");
 });
 
-// Webserver
-app.listen(3000, function () {
-  console.log("Listening port 3000");
+//Webserver
+app.listen(PORT, function () {
+  console.log(`Listening on ${PORT}`);
 });
