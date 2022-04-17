@@ -23,11 +23,12 @@ app.use(bodyParser.json());
 
 // EJS file routes
 
-// Frontpage
+// Frontpage & axios search
 app.get("/", function (req, res) {
   const search = req.query.search;
   console.log(search);
 
+  // search from the API and if there is no search word, sends empty array -> this happens also if query is not understandable
   if (search) {
     axios
       .get("https://www.omdbapi.com/?s=" + search + "&apikey=a13895a5")

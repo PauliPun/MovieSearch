@@ -61,11 +61,6 @@ h3 {
   margin: 5px;
 }
 
-.reponsiveimg {
-  width: 100%;
-  height: auto;
-}
-
 .bgfooter {
   background-color: #45a29e;
   color: #f3f3f3;
@@ -82,10 +77,6 @@ h3 {
   margin-left: auto;
 }
 
-.linklist {
-  list-style-type: none;
-}
-
 .tableColors {
   color: #000000;
   background-color: #73e2db;
@@ -93,30 +84,4 @@ h3 {
 
 .tablerow {
   background-color: #b1ced3;
-}
-
-/* Links */
-
-p a,
-.alist {
-  text-decoration: none;
-  color: #7734c4;
-}
-
-p a:hover,
-.alist:hover {
-  text-decoration: none;
-  color: #ec2ffd;
-}
-
-nav a,
-.logolink {
-  text-decoration: none;
-  color: #000000;
-}
-
-nav a:hover,
-.logolink:hover {
-  text-decoration: none;
-  color: #000000;
 }
